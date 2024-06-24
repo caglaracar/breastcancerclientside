@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 
-function Login({ setToken }) {
+function Login({setToken}) {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
@@ -19,7 +19,7 @@ function Login({ setToken }) {
                 }
             });
             if (response.status === 200) {
-                console.log("token",response);
+                console.log("token", response);
                 const token = response.data.jwtToken;
                 localStorage.setItem('token', token);
                 axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
@@ -32,17 +32,27 @@ function Login({ setToken }) {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <label>
-                Username:
-                <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
-            </label>
-            <label>
-                Password:
-                <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-            </label>
-            <button type="submit">Login</button>
-        </form>
+        <div class="wrapper">
+
+            <div class="form-wrapper sign-in">
+
+                <form onSubmit={handleSubmit}>
+                    <div className="input-group">
+                        <input type="text" value={username} onChange={(e) => setUsername(e.target.value)}/>
+                        <label>Kullanıcı Adı</label>
+                    </div>
+
+                    <div className="input-group">
+                        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
+                        <label>Şifre</label>
+                    </div>
+
+
+                    <button className={"btn"} type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+
     );
 }
 

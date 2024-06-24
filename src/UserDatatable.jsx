@@ -86,7 +86,7 @@ function UserTable() {
     }
     return (
         <div style={{overflowX: 'auto',overflowY:"auto"}}>
-            <table {...getTableProps()} style={{width: '100%', borderCollapse: 'collapse'}}>
+            <table {...getTableProps()} style={{width: '100%', borderCollapse: 'collapse',overflowY:"auto"}}>
                 <thead>
                 {headerGroups.map(headerGroup => (
                     <tr {...headerGroup.getHeaderGroupProps()}>
@@ -133,8 +133,8 @@ function UserTable() {
                 </tbody>
             </table>
 
-            <div style={{marginTop:'30px',marginBottom:"30px",marginLeft:"40px"}}>
-                <button style={{padding:"10px"}} onClick={handleExport}>Excel İNDİR!</button>
+            <div style={{marginTop:'30px',marginBottom:"30px"}}>
+                <button style={{padding:"10px",marginBottom:"20px"}} onClick={handleExport}>Excel İNDİR!</button>
             </div>
 
             <Modal
