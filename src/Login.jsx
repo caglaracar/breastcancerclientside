@@ -10,7 +10,7 @@ function Login({ setToken }) {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:8080/api/user/login', {
+            const response = await axios.post('http://165.232.75.224:8080/api/user/login', {
                 username,
                 password
             }, {
