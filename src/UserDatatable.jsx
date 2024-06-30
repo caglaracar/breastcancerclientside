@@ -15,7 +15,7 @@ function UserTable() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const result = await axios.get('https://45.147.46.202/api/user/all');
+                const result = await axios.get('https://45.147.46.202:443/api/user/all');
                 setData(result.data);
             } catch (ex) {
                 console.error(ex);

@@ -10,7 +10,7 @@ function Login({setToken}) {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('https://45.147.46.202/api/user/login', {
+            const response = await axios.post('https://45.147.46.202:443/api/user/login', {
                 username,
                 password
             }, {
@@ -32,9 +32,9 @@ function Login({setToken}) {
     };
 
     return (
-        <div class="wrapper">
+        <div className="wrapper">
 
-            <div class="form-wrapper sign-in">
+            <div className="form-wrapper sign-in">
 
                 <form onSubmit={handleSubmit}>
                     <div className="input-group">
