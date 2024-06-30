@@ -20,7 +20,6 @@ function App() {
     useEffect(() => {
         if (token && !isTokenExpired(token)) {
             setAuthToken(token);
-            console.log("app.js", token)
         } else {
             setToken(null);
             localStorage.removeItem('token');
