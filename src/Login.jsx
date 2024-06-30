@@ -10,7 +10,7 @@ function Login({setToken}) {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('https://45.147.46.202:443/api/user/login', {
+            const response = await axios.post('http://45.147.46.202:443/api/user/login', {
                 username,
                 password
             }, {
