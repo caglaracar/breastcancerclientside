@@ -47,6 +47,7 @@ function UserTable() {
                         exerciseDate: ex.exerciseDate,
                         exerciseName: ex.exerciseName,
                         calories: ex.calories,
+                        testResult:ex.testResult,
                         difficultyLevel: ex.difficultyLevel,
                         steps: ex.step?.reduce((acc, item) => acc + item.steps, 0) || 0
                     });
@@ -162,6 +163,7 @@ function UserTable() {
                             <span>Tarih: {new Date(ex.exerciseDate).toLocaleString()}</span>
                             <span>Egzersiz Adı: {ex.exerciseName}</span>
                             <span>Kalori: {ex.calories}</span>
+                            <span>Test Sonucu: {ex.testResult}</span>
                             <span>Zorluk Seviyesi: {ex.difficultyLevel}</span>
                             <span>Adım Sayısı: {ex.step?.reduce((acc, item) => acc + item.steps, 0) || 0}</span>
                         </li>
