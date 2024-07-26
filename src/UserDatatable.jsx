@@ -25,7 +25,7 @@ function UserTable() {
     }, []);
 
     const columns = useMemo(() => [
-        { Header: 'Adı', accessor: 'securityUser.username' },
+        { Header: 'Kullanıcı Adı', accessor: 'securityUser.username' },
         { Header: 'Soyadı', accessor: 'surname' },
         { Header: 'E-posta', accessor: 'email' },
         { Header: 'Yaş', accessor: 'age' },
